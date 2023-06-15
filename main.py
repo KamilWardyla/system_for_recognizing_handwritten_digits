@@ -54,9 +54,21 @@ def save_model_to_file():
 def load_model_from_file():
     filename = 'svm_model.pkl'
     loaded_model = pickle.load(open(filename, "rb"))
-    img = mp_image.imread('six_number.png')
+    # img = mp_image.imread('six_number.png')
+    return loaded_model
 
 
 if __name__ == "__main__":
-    save_model_to_file()
+    # save_model_to_file()
     print(load_model_from_file())
+
+"""
+pygame
+drawing_array = np.zeros((8, 8))
+
+elif event.type == pygame.MOUSEMOTION and drawing:
+            x, y = pygame.mouse.get_pos()
+            if (x < 0 or x >= DRAW_WIDTH) or (y < 0 or y >= DRAW_HEIGHT): continue
+            row, col = int(y / 20), int(x / 20)
+            drawing_array[row][col] = 16
+"""
