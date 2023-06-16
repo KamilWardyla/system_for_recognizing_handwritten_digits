@@ -7,7 +7,7 @@ from PIL import Image
 
 
 class DigitRecognitionApp:
-    
+
     def __init__(self):
 
         self.root = tk.Tk()
@@ -47,7 +47,7 @@ class DigitRecognitionApp:
         self.canvas.y = event.y
 
     def get_image(self):
-        ps_data = self.canvas.postscript(colormode='gray')
+        ps_data = self.canvas.postscript(colormode='color')
         img = Image.open(io.BytesIO(ps_data.encode('utf-8')))
         return img
 
